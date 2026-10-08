@@ -1,0 +1,13 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "industrial_infrastructure",
+    "name": "Industrial Infrastructure",
+    "authors": [ "Winterhome" ],
+    "maintainers": [ "Winterhome" ],
+	"license": "CC-BY-SA 3.0",
+    "description": "Industrial scale crafting and eventual larger scale content mod.",
+    "category": "content",
+    "dependencies": [ "bn" ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "type": "recipe",
+    "result": "juryriggedelectrolyzer",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "skills_required": [ [ "electronics", 6 ], [ "fabrication", 9 ], [ "cooking", 7 ], [ "mechanics", 4 ] ],
+	"//": "Need to learn how to do industrial scale electrolysis in the first place to design the machine. Need mechanical and fabrication skill to actually do it. This is an all-skills construction.",
+    "difficulty": 9,
+    "time": "14 h",
+    "reversible": true,
+    "decomp_learn": 6,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_lab_elec", 6 ], [ "recipe_lab_cvd", 9 ] ],
+    "using": [ [ "soldering_standard", 20 ], [ "welding_standard", 20 ] ],
+    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "SAW_M", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 } ],
+    "components": [
+      [ [ "55gal_drum", 2 ] ],
+      [ [ "sheet_metal", 180 ] ],
+      [ [ "cable", 200 ] ],
+      [ [ "pipe", 2 ] ],
+      [ [ "lead", 120 ] ],
+	  [ [ "well_pump", 2 ] ],
+	  [ [ "hdframe", 2 ] ],
+	  [ [ "asbestos_paper", 181 ] ],
+	  [ [ "i_koh", 40 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "c_hydrogen_gas",
+	"id_suffix": "from_industrial_juryrig",
+	"byproducts": [ [ "i_oxygen_gas", 20 ] ],
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_FUEL",
+    "skill_used": "cooking",
+    "skills_required": [ [ "mechanics", 3 ], [ "cooking", 7 ] ],
+    "difficulty": 6,
+	"charges": 40,
+    "time": "10 s",
+    "//": "Our jury-rigged setup is lossier than WWI-era hydrogen electrolysis systems used for zeppelin production, but is vastly more efficient than the small scale kit's >99% lossy recipe by energy, given the surface area of our electrodes and the presence of an electrolyte.",
+    "autolearn": [ [ "cooking", 7 ], [ "electronics", 6 ] ],
+    "book_learn": [
+      [ "adv_chemistry", 3 ],
+      [ "textbook_chemistry", 3 ],
+      [ "recipe_labchem", 3 ],
+      [ "textbook_gaswarfare", 4 ],
+      [ "atomic_survival", 4 ],
+      [ "reference_fabrication1", 3 ],
+      [ "reference_cooking", 4 ]
+    ],
+    "tools": [ [ [ "fake_gridelectrolyzer", 600 ] ] ],
+    "components": [ [ [ "water_clean", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "i_slaked_lime",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "cooking",
+    "skills_required": [ [ "cooking", 3 ] ],
+    "difficulty": 3,
+    "time": "12 m",
+	"charges": 1000,
+    "autolearn": false,
+    "flags": [ "BLIND_EASY" ],
+    "batch_time_factors": [ 95, 5 ],
+    "book_learn": [ [ "recipe_labchem", 4 ], [ "textbook_chemistry", 4 ], [ "reference_cooking", 4 ] ],
+    "qualities": [ { "id": "BOIL", "level": 2 }, { "id": "CHEM", "level": 1 } ],
+    "components": [ [ [ "material_quicklime", 1000 ] ], [ [ "water", 1 ], [ "water_clean", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "i_pearlash",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "skills_required": [ "cooking", 2 ],
+    "difficulty": 3,
+    "time": "12 m",
+    "charges": 10,
+    "batch_time_factors": [ 90, 4 ],
+    "autolearn": [ [ "fabrication", 4 ], [ "cooking", 4 ] ],
+    "book_learn": [ [ "concrete_book", 3 ], [ "adv_chemistry", 3 ], [ "textbook_chemistry", 3 ], [ "reference_cooking", 4 ] ],
+    "qualities": [ { "id": "CONTAIN_HOT", "level": 1 } ],
+    "tools": [ [ [ "forge", 50 ], [ "oxy_torch", 10 ] ] ],
+    "components": [ [ [ "lye_powder", 10 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "chem_potassium_hydroxide",
+	"id_suffix": "from_pearlash_and_lime",
+	"byproducts": [ [ "i_calcium_carbonate", 4 ] ],
+	"//": "4x i_calcium_carbonate is equal to 200 units due to 50 charge count and byproduct jank. Multiply by 400 charges to get 2,000 units out.",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "cooking",
+    "skills_required": [ [ "cooking", 4 ] ],
+    "difficulty": 4,
+    "time": "60 m",
+	"charges": 400,
+    "autolearn": false,
+    "flags": [ "BLIND_EASY" ],
+    "batch_time_factors": [ 95, 5 ],
+    "book_learn": [ [ "recipe_labchem", 4 ], [ "textbook_chemistry", 4 ], [ "reference_cooking", 4 ] ],
+    "qualities": [ { "id": "BOIL", "level": 2 }, { "id": "CHEM", "level": 1 } ],
+	"tools": [ [ [ "silver_small", -1 ] ] ],
+    "components": [ [ [ "i_slaked_lime", 200 ] ], [ [ "water", 1 ], [ "water_clean", 1 ] ], [ [ "i_pearlash", 200 ] ] ]
+  },
+  {
+	"type": "recipe",
+	"result": "i_koh",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "cooking",
+    "skills_required": [ [ "cooking", 4 ] ],
+	"difficulty": 2,
+    "time": "40 m",
+    "autolearn": false,
+    "flags": [ "BLIND_EASY" ],
+	"charges": 1,
+    "batch_time_factors": [ 95, 5 ],
+    "book_learn": [ [ "recipe_labchem", 4 ], [ "textbook_chemistry", 4 ], [ "reference_cooking", 4 ] ],
+	"qualities": [ { "id": "CHEM", "level": 1 } ],
+	"components": [ [ [ "chem_potassium_hydroxide", 100 ] ], [ [ "water", 1 ], [ "water_clean", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "material_quicklime",
+	"id_suffix": "from_calcium_carbonate",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "skills_required": [ "cooking", 2 ],
+    "difficulty": 3,
+    "time": "12 m",
+    "charges": 10,
+    "batch_time_factors": [ 90, 4 ],
+    "autolearn": [ [ "fabrication", 4 ], [ "cooking", 4 ] ],
+    "book_learn": [ [ "concrete_book", 3 ], [ "adv_chemistry", 3 ], [ "textbook_chemistry", 3 ], [ "reference_cooking", 4 ] ],
+    "qualities": [ { "id": "CONTAIN_HOT", "level": 1 } ],
+    "tools": [ [ [ "forge", 50 ], [ "oxy_torch", 10 ] ] ],
+    "components": [ [ [ "i_calcium_carbonate", 10 ] ] ]
+  },
+  {
+	"type": "recipe",
+	"result": "asbestos_paper",
+	"category": "CC_CHEM",
+	"subcategory": "CSC_OTHER_MATERIALS",
+	"skill_used": "cooking",
+	"skills_required": [ "cooking", 7 ],
+	"difficulty": 3,
+	"time": "6 h 30 m",
+	"batch_time_factors": [ 95, 2 ],
+	"autolearn": false,
+	"book_learn": [ [ "adv_chemistry", 4], [ "textbook_chemistry", 4 ], [ "textbook_fireman", 4 ] ],
+	"qualities": [ { "id": "CHEM", "level": 1 } ],
+	"tools": [ [ ["wire_mesh", -1 ] ], [ [ "2x4", -1 ], [ "cudgel", -1 ], [ "2h_flail_wood", -1 ], [ "stick", -1 ] ] ],
+	"components": [ [ [ "i_asbestos_insulation", 1 ] ], [ [ "chem_muriatic_acid", 1 ] ], [ [ "water", 2 ], [ "water_clean", 2 ] ] ]
+	}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+[
+  {
+    "type": "enchantment",
+    "id": "i_enchant_microminerals",
+    "emitter": "i_emit_micromineral1"
+  }
+]

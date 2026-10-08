@@ -1,0 +1,25 @@
+[
+  {
+    "id": "c_hydrogen_gas",
+    "type": "AMMO",
+	"name": { "str_sp": "hydrogen gas" },
+    "copy-from": "c_hydrogen_gas",	
+	"spill_field": "i_fd_hydrogen_gas",
+	"delete": { "flags": [ "DESTROY_ON_DROP" ] }
+  },
+  {
+    "id": "i_oxygen_gas",
+    "type": "AMMO",
+    "name": { "str_sp": "oxygen" },
+    "description": "Pure oxygen.",
+    "weight": "133 mg",
+    "volume": "100 ml",
+    "category": "chems",
+    "phase": "gas",
+    "spill_field": "i_fd_oxygen_gas",
+    "container": "metal_tank_little",
+    "symbol": "=",
+    "color": "white",
+    "ammo_type": "i_oxygen"
+  }
+]

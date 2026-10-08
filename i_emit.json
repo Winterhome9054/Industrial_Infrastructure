@@ -1,0 +1,19 @@
+[
+  {
+    "id": "i_emit_micromineral1",
+    "type": "emit",
+    "//": "Dangerous to handle this stuff due to mineral dust inhalation risk.",
+    "field": "i_fd_microminerals",
+    "intensity": 1,
+    "chance": 10
+  },
+  {
+    "id": "i_emit_micromineral2",
+    "type": "emit",
+    "//": "Even more dangerous to handle this stuff due to mineral dust inhalation risk.",
+    "field": "i_fd_microminerals",
+    "intensity": 1,
+	"qty": 3,
+	"chance": 100
+  }
+]

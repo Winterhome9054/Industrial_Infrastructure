@@ -1,0 +1,73 @@
+[
+	{
+		"type": "effect_type",
+		"id": "i_asphyxiation",
+		"name": [ "Mild Oxygen Deprivation", "Moderate Oxygen Deprivation", "Severe Oxygen Deprivation", "Critical Oxygen Deprivation" ],
+		"desc": [ "You feel lightheaded and short of breath.", "Your lungs burn and your vision blurs.", "You gasp for air that isn't there.", "You are suffocating." ],
+		"apply_message": "The air is gone. You cannot breathe!",
+		"remove_message": "You gasp as fresh air floods your lungs.",
+		"rating": "bad",
+		"max_intensity": 4,
+		"max_effective_intensity": 4,
+		"max_duration": "10 m",
+		"int_dur_factor": "30 s",
+		"base_mods": {
+			"str_mod": [ -1, 0 ],
+			"dex_mod": [ -1, 0 ],
+			"speed_mod": [ -5, 0 ],
+			"stamina_amount": [ -500, -200 ],
+			"stamina_min": [ -10 ],
+			"stamina_chance": [ 50, 20 ],
+			"hurt_amount": [ 0, 0 ],
+			"hurt_chance": [ 0, 0 ]
+		},
+		"scaling_mods": {
+			"str_mod": [ -1, -0.5 ],
+			"dex_mod": [ -1, -0.5 ],
+			"speed_mod": [ -10, -5 ],
+			"stamina_amount": [ -1000, -500 ],
+			"stamina_min": [ -20, -10 ],
+			"stamina_chance": [ 30, 10 ],
+			"hurt_amount": [ 2, 4 ],
+			"hurt_chance": [ 20, 10 ],
+			"hurt_tick": [ 30 ]
+		},
+		"show_in_info": true,
+		"blood_analysis_description": "Hypoxemia"
+	},
+	{
+    "type": "effect_type",
+    "id": "i_effect_micromineral",
+    "name": [ "Breathing Trouble", "Respiratory Strain", "Asbestosis", "Severe Asbestosis"	],
+    "desc": [
+      "You've inhaled something bad, but not too much.",
+      "You've inhaled something bad, and concerning symptoms have started. Asbestos exposure, maybe?",
+      "You've inhaled something bad, and quite a lot of it. Your lungs aren't working as intended. The asbestos may be killing you.",
+      "You've inhaled something bad, and you're not sure if you're going to make it. The asbestos is killing you."
+    ],
+    "apply_message": "The air feels strangely dry...",
+    "max_intensity": 4,
+    "int_dur_factor": "7 days",
+    "max_duration": "35 days",
+    "rating": "bad",
+    "miss_messages": [ [ "Discomfort in your chest throws off your aim.", 5 ] ],
+    "harmful_cough": true,
+    "base_mods": { "cough_tick": [ 100 ], "cough_chance": [ 1 ], "hurt_tick": [ 100 ], "hurt_chance": [ 5 ], "hurt_amount": [ 1 ], "pain_tick": [ 100 ], "pain_chance": [ 10 ], "pain_amount": [ 1 ], "speed_mod": [ -2 ] },
+    "scaling_mods": {
+      "str_mod": [ -1 ],
+      "dex_mod": [ -1 ],
+      "int_mod": [ -1 ],
+      "speed_mod": [ -5 ],
+	  "cough_chance": [ 2 ],
+	  "cough_tick": [ -20 ],
+	  "hurt_chance": [ 5 ],
+	  "hurt_amount": [ 5 ],
+	  "pain_chance": [ 5 ],
+	  "pain_amount": [ 2 ]
+    },
+	"base_enchantments": [ { "values": [ { "value": "STAMINA_CAP", "multiply": -0.1 } ] } ],
+	"scaling_enchantments": [ { "values": [ { "value": "STAMINA_CAP", "multiply": -0.1 } ] } ],
+    "show_in_info": true,
+	"blood_analysis_description": "Mineral particulates"
+  }
+]

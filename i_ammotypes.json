@@ -1,0 +1,8 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "i_oxygen",
+    "name": "oxygen gas",
+    "default": "i_oxygen_gas"
+  }
+]

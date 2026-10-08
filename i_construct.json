@@ -1,0 +1,26 @@
+[
+  {
+    "type": "construction",
+    "id": "constr_gridelectrolyzer",
+    "group": "place_gridelectrolyzer",
+    "category": "WORKSHOP",
+    "required_skills": [ [ "fabrication", 8 ] ],
+    "time": "10 h",
+    "using": [ [ "soldering_standard", 20 ], [ "welding_standard", 20 ] ],
+    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "SAW_M", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 } ],
+    "components": [
+      [ [ "55gal_drum", 2 ] ],
+      [ [ "sheet_metal", 180 ] ],
+      [ [ "cable", 200 ] ],
+      [ [ "pipe", 2 ] ],
+      [ [ "lead", 120 ] ],
+	  [ [ "well_pump", 2 ] ],
+	  [ [ "hdframe", 2 ] ],
+	  [ [ "asbestos_paper", 181 ] ],
+	  [ [ "i_koh", 40 ] ]
+    ],
+    "pre_note": "Will only work if constructed in/on a building that has an electric grid with a mounted battery. Activate to deconstruct to deployable item.",
+    "pre_special": "check_empty",
+    "post_furniture": "f_gridelectrolyzer"
+  }
+]

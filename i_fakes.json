@@ -1,0 +1,33 @@
+[
+  {
+    "id": "fake_gridelectrolyzer",
+    "copy-from": "fake_item",
+    "type": "TOOL",
+    "name": { "str": "grid alkaline electrolyzer" },
+    "sub": "fake_gridelectrolyzer",
+    "max_charges": 30000,
+    "flags": [ "USES_GRID_POWER" ]
+  },
+  {
+    "id": "i_tool_beating_wood",
+    "type": "requirement",
+    "//": "For bludgeoning materials that need to be bludgeoned, using a wooden tool.",
+    "tools": [ [ [ "2h_flail_wood", -1 ], [ "bat", -1 ], [ "bokken", -1 ], [ "bokken_inferior", -1 ], [ "bokken_fake", -1 ], [ "bowling_pin", -1 ], [ "cane", -1 ], [ "cudgel", -1 ], [ "shillelagh", -1 ], [ "shillelagh_fake", -1 ], [ "tonfa_wood", -1 ], [ "stick", -1 ], [ "2x4", -1 ] ] ]
+  },
+  {
+    "type": "item_group",
+    "id": "wall_bash_results",
+    "subtype": "collection",
+    "entries": [
+      { "item": "rock", "count": [ 0, 2 ] },
+      { "item": "wood_panel", "count": [ 0, 1 ] },
+      { "item": "nail", "charges": [ 4, 16 ] },
+      { "item": "splinter", "count": [ 1, 5 ] },
+      { "item": "2x4", "count": [ 1, 2 ], "prob": 25 },
+      { "item": "pipe", "count": [ 0, 2 ], "prob": 10 },
+      { "item": "cu_pipe", "count": [ 0, 2 ], "prob": 10 },
+      { "item": "cable", "charges": [ 0, 200 ], "prob": 10 },
+	  { "item": "i_asbestos_insulation", "charges": [ 1, 3 ], "prob": 15 }
+    ]
+  }
+]

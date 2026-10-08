@@ -1,0 +1,113 @@
+[
+  {
+    "id": "i_fd_hydrogen_gas",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "thin hydrogen cloud",
+        "sym": "8",
+		"color": "white",
+      },
+      {
+        "name": "hydrogen cloud",
+        "color": "light_gray",
+      },
+      {
+        "name": "thick hydrogen cloud",
+        "color": "dark_gray",
+      }
+    ],
+    "decay_amount_factor": 5,
+    "percent_spread": 300,
+    "outdoor_age_speedup": "10 seconds",
+    "underwater_age_speedup": "1 second",
+    "priority": -1,
+    "half_life": "15 minutes",
+    "phase": "gas",
+	"flammable": true,
+	"has_fume": true,
+    "immunity_data": { "body_part_env_resistance": [ [ "mouth", 20 ] ] }
+  },
+  {
+    "id": "i_fd_oxygen_gas",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "thin oxygen cloud",
+        "sym": "8",
+		"color": "white",
+      },
+      {
+        "name": "oxygen cloud",
+        "color": "light_gray",
+      },
+      {
+        "name": "thick oxygen cloud",
+        "color": "dark_gray",
+      }
+    ],
+    "decay_amount_factor": 5,
+    "percent_spread": 300,
+    "outdoor_age_speedup": "10 seconds",
+    "underwater_age_speedup": "1 second",
+    "priority": -1,
+    "half_life": "15 minutes",
+    "phase": "gas",
+	"flammable": true,
+	"has_fume": true,
+    "immunity_data": { "body_part_env_resistance": [ [ "mouth", 20 ] ] }
+  },
+  {
+    "id": "i_fd_microminerals",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "microminerals",
+        "sym": "~",
+        "effects": [
+          {
+            "effect_id": "i_effect_micromineral",
+            "body_part": "torso",
+            "intensity": 1,
+            "min_duration": "3 seconds",
+            "max_duration": "15 seconds"
+          }
+        ]
+      },
+      {
+        "name": "thick microminerals",
+        "effects": [
+          {
+            "effect_id": "i_effect_micromineral",
+            "body_part": "torso",
+            "intensity": 1,
+            "min_duration": "10 seconds",
+            "max_duration": "30 seconds"
+          }
+        ]
+      },
+      {
+        "name": "very thick microminerals",
+        "effects": [
+          {
+            "effect_id": "i_effect_micromineral",
+            "body_part": "torso",
+            "intensity": 1,
+            "min_duration": "20 seconds",
+            "max_duration": "60 seconds"
+          }
+        ]
+      }
+    ],
+    "decay_amount_factor": 3,
+    "gas_absorption_factor": 3600,
+    "percent_spread": 10,
+    "outdoor_age_speedup": "1 minutes",
+    "dirty_transparency_cache": true,
+    "has_fume": true,
+    "immunity_data": { "body_part_env_resistance": [ [ "mouth", 7 ] ] },
+    "priority": -1,
+    "half_life": "3 seconds",
+    "phase": "gas"
+  }
+]
